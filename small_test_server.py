@@ -16,8 +16,8 @@ def callback():
     json = request.json
 
     with open('{}/dump.txt'.format(app.root_path), 'w') as file:
-        file.write(str(data))
-        file.write(str(json))
+        file.write('\n\nREQUEST DATA: \n' + str(data) + '\n')
+        file.write('\n\nREQUEST JSON: \n' + str(json) + '\n')
 
     return 'ok'
 
